@@ -15,7 +15,7 @@ arr = []
 epArr = []
 arrNum = []
 
-print("\n    | New Episodes: \n    -------------------\n")
+print("\n    | New Episodes: \n    ---------------\n")
 for i in range(len(episodes)):
     str = f'    | {episodes[i]}  '
     arr.append(epNum[i])
