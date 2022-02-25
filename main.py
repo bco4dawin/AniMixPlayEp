@@ -11,6 +11,7 @@ html = scraper.get("https://animixplay.to/").text
 
 episodes = re.findall('<p class="name">(.*?)</p>',html)
 epNum = re.findall("<p class=\"infotext\">(.*?)</p>", html)
+desc = re.findall("<div class=\"timetext\">(.*?)</div>", html)
 arr = []
 epArr = []
 arrNum = []
@@ -25,10 +26,11 @@ for i in range(len(episodes)):
     epGap.append(len(epArr[i]))
 
 m = max(arrNum)
-min = max(epGap) - min(epGap)
+x = max([len(i) for i in epNum])
+epM = [x - len(i) for i in epNum]
 
 for i in range(len(episodes)):
-    full = epArr[i] + (' ' * (m - len(episodes[i]))) + "| " + arr[i]
+    full = epArr[i] + (' ' * (m - len(episodes[i]))) + "| " + arr[i] + (" " * epM[i]) + "   |   " + desc[i]
     print(full)
     print("    " + "-" * (len(full)-4))
 print()
