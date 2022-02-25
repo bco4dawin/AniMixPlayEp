@@ -18,7 +18,7 @@ arrNum = []
 epGap = []
 
 print("\n    | New Episodes: \n    ---------------\n")
-for i in range(len(episodes)):
+for i in range(10):
     str = f'    | {episodes[i]}  '
     arr.append(epNum[i])
     epArr.append(str)
@@ -29,8 +29,9 @@ m = max(arrNum)
 x = max([len(i) for i in epNum])
 epM = [x - len(i) for i in epNum]
 
-for i in range(len(episodes)):
-    full = epArr[i] + (' ' * (m - len(episodes[i]))) + "| " + arr[i] + (" " * epM[i]) + "   |   " + desc[i]
+for i in range(10):
+    full = epArr[i] + (' ' * (m - len(episodes[i]))) + "| " + arr[i] + (" " * epM[i]) + "   |   " + desc[i] + "\n"
     print(full)
     print("    " + "-" * (len(full)-4))
+    print()
 print()
