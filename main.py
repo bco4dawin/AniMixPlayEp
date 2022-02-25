@@ -14,6 +14,7 @@ epNum = re.findall("<p class=\"infotext\">(.*?)</p>", html)
 arr = []
 epArr = []
 arrNum = []
+epGap = []
 
 print("\n    | New Episodes: \n    ---------------\n")
 for i in range(len(episodes)):
@@ -21,10 +22,13 @@ for i in range(len(episodes)):
     arr.append(epNum[i])
     epArr.append(str)
     arrNum.append(len(str))
+    epGap.append(len(epArr[i]))
 
 m = max(arrNum)
+min = max(epGap) - min(epGap)
 
 for i in range(len(episodes)):
     full = epArr[i] + (' ' * (m - len(episodes[i]))) + "| " + arr[i]
     print(full)
-    print("    " + "-" * len(full))
+    print("    " + "-" * (len(full)-4))
+print()
