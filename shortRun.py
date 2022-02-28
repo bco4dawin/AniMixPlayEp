@@ -9,7 +9,7 @@ while True:
         x = 0
         while x < 300:
             print("\033[A                             \033[A")
-            print(f'     {10 - x} Seconds Until Next Update.')
+            print(f'     {300 - x} Seconds Until Next Update.')
             time.sleep(1)
             x+=1
     except KeyboardInterrupt:
