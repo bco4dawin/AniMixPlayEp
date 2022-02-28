@@ -46,3 +46,4 @@ for i in range(10):
         print("    |" + " " * (len(full)-6) + "|")
     
 print("\n     By: PFC Cruz Vazquez, Jeremy A.\n")
+print()
