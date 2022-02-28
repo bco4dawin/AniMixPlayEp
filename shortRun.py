@@ -7,7 +7,7 @@ while True:
     try:
         exec(string)
         x = 0
-        while x < 10:
+        while x < 300:
             print("\033[A                             \033[A")
             print(f'     {10 - x} Seconds Until Next Update.')
             time.sleep(1)
