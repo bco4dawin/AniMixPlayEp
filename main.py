@@ -18,7 +18,7 @@ arrNum = []
 epGap = []
 
 for i in range(10):
-    str = f'    | {episodes[i]}  '
+    str = f'    |  {episodes[i]}  '
     arr.append(epNum[i])
     epArr.append(str)
     arrNum.append(len(str))
@@ -30,9 +30,9 @@ epM = [x - len(i) for i in epNum]
 f = 0
 
 for i in range(10):
-    full = epArr[i] + (' ' * (m - len(episodes[i]))) + "| " + arr[i] + (" " * epM[i]) + "   |   " + desc[i] + "    |"
+    full = epArr[i] + (' ' * (m - len(episodes[i]))) + "|   " + arr[i] + (" " * epM[i]) + "   |   " + desc[i] + "    |"
     if f == 0:
-        print(f'    ╭---------------╮\n    | New Episodes: |\n    ╰---------------╯\n\n    ╭{"-" * (m + x + len(desc[0]) + 12)}----╮\n{"    |" + " " * (len(full)-6) + "|"}')
+        print(f'    ╭---------------╮\n    | New Episodes: |\n    ╰---------------╯\n\n    ╭{"-" * (m + x + len(desc[0]) + 12)}-------╮\n{"    |" + " " * (len(full)-6) + "|"}')
         f = 1
     print(full)
     if i < 9:
@@ -45,4 +45,4 @@ for i in range(10):
     if i < 9:
         print("    |" + " " * (len(full)-6) + "|")
     
-print()
+print("\n     By: PFC Cruz Vazquez, Jeremy A.\n")
