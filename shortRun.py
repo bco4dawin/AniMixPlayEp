@@ -16,5 +16,5 @@ while True:
         print("Thanks For Using Me")
         break
     except IndexError:
-        os.system("python3 Ani.py")
+        os.system("cd; cd Desktop; python3 main.py")
         exit()
