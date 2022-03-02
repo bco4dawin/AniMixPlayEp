@@ -1,5 +1,5 @@
 from requests import get
-import time, os
+import time, os, math
 url = "https://raw.githubusercontent.com/bco4dawin/AniMixPlayEp/main/main.py"
 string = get(url).text
 
@@ -7,9 +7,10 @@ while True:
     try:
         exec(string)
         x = 0
-        while x < 300:
+        r = 30
+        while x < r:
             print("\033[A                             \033[A")
-            print(f'     {300 - x} Seconds Until Next Update.')
+            print(f'     Updating ... {("█" * (math.ceil((x/r) * 20) + 1)) + ("▒" * math.ceil(20 - ((x/r) * 20)))}')
             time.sleep(1)
             x+=1
     except KeyboardInterrupt:
