@@ -2,7 +2,7 @@ from requests import get
 import time, os, math
 import sys
 
-sys.stdout.write("\x1b[8;{rows};{cols}t".format(rows=50, cols=100))
+sys.stdout.write("\x1b[8;{rows};{cols}t".format(rows=50, cols=120))
 url = "https://raw.githubusercontent.com/bco4dawin/AniMixPlayEp/main/main.py"
 string = get(url).text
 
