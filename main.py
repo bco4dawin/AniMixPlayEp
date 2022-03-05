@@ -1,8 +1,11 @@
 import cloudscraper
 import re
-from os import system
+from os import system and name
 
-system("clear")
+if name == 'nt':
+    system("cls")
+else:
+   system("clear")
 
 scraper = cloudscraper.create_scraper()
 
