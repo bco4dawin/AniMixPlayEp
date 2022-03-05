@@ -1,6 +1,6 @@
 import cloudscraper
 import re
-from os import system and name
+from os import system , name
 
 if name == 'nt':
     system("cls")
